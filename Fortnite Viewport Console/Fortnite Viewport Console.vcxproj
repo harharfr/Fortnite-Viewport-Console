@@ -130,7 +130,33 @@
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sakura.h" />
+    <ClInclude Include="sakura\sdk.h" />
+    <ClInclude Include="sakura\sdk\core_uobject\uclass.h" />
+    <ClInclude Include="sakura\sdk\core_uobject\ufunction.h" />
+    <ClInclude Include="sakura\sdk\core_uobject\uobject.h" />
+    <ClInclude Include="sakura\sdk\core_uobject\ustruct.h" />
+    <ClInclude Include="sakura\sdk\engine\uconsole.h" />
+    <ClInclude Include="sakura\sdk\engine\uengine.h" />
+    <ClInclude Include="sakura\sdk\engine\ugameplay_statics.h" />
+    <ClInclude Include="sakura\sdk\engine\ugame_viewport_client.h" />
+    <ClInclude Include="sakura\sdk\fortnite_game\ufort_console.h" />
+    <ClInclude Include="sakura\sdk\fortnite_game\ufort_engine.h" />
+    <ClInclude Include="sakura\sdk\fortnite_game\ufort_game_viewport_client.h" />
+    <ClInclude Include="sakura\sdk\unreal_containers.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nlohmann.json.3.11.3\build\native\nlohmann.json.targets" Condition="Exists('..\packages\nlohmann.json.3.11.3\build\native\nlohmann.json.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\nlohmann.json.3.11.3\build\native\nlohmann.json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nlohmann.json.3.11.3\build\native\nlohmann.json.targets'))" />
+  </Target>
 </Project>
