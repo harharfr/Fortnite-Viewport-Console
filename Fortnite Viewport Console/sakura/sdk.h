@@ -109,6 +109,7 @@ class UFunction;
 class UEngine;
 class UGameViewportClient;
 class UConsole;
+class UGameplayStatics;
 
 /* /Script/FortniteGame */
 class UFortEngine;
