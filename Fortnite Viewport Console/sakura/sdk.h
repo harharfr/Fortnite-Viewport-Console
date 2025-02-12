@@ -93,6 +93,12 @@ namespace SDK
 				Offsets::StaticFindObject = 0x2643024;
 				Offsets::ProcessEvent = 0x2511BC8; // (Index: 0x47)
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39768313-Windows")
+			{
+				Offsets::StaticFindObject = 0x200C490;
+				Offsets::ProcessEvent = 0x1EE6470; // (Index: 0x27)
+			}
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
