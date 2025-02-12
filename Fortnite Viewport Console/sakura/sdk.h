@@ -50,8 +50,6 @@ namespace SDK
 		{
 			std::string ReleaseVersion = GetReleaseVersion();
 
-			// offsets -> https://github.com/SternI/FortniteOffsets
-
 			if (ReleaseVersion == "++Fortnite+Release-33.00-CL-38324112-Windows")
 			{
 				Offsets::StaticFindObject = 0x17FEE00;
@@ -88,13 +86,13 @@ namespace SDK
 				Offsets::ProcessEvent = 0x21232B4; // (Index: 0x43)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39435251-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39435251-Windows") // thanks omutu
 			{
 				Offsets::StaticFindObject = 0x2643024;
 				Offsets::ProcessEvent = 0x2511BC8; // (Index: 0x47)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39768313-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39768313-Windows") // thanks omutu
 			{
 				Offsets::StaticFindObject = 0x200C490;
 				Offsets::ProcessEvent = 0x1EE6470; // (Index: 0x27)
