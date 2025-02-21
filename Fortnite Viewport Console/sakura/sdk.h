@@ -50,52 +50,62 @@ namespace SDK
 		{
 			std::string ReleaseVersion = GetReleaseVersion();
 
-			if (ReleaseVersion == "++Fortnite+Release-33.00-CL-38324112-Windows")
+			// Chapter 6 Season 1
+
+			if (ReleaseVersion == "++Fortnite+Release-33.00-CL-38324112-Windows") // thanks LEF
 			{
 				Offsets::StaticFindObject = 0x17FEE00;
 				Offsets::ProcessEvent = 0x1870C8C; // (Index: 0x42)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.00-CL-38504598-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.00-CL-38504598-Windows") // thanks LEF
 			{
 				Offsets::StaticFindObject = 0x17A8760;
 				Offsets::ProcessEvent = 0x16497FC; // (Index: 0x16)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.10-CL-38630093-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.10-CL-38630093-Windows") // thanks LEF
 			{
 				Offsets::StaticFindObject = 0x267f424;
 				Offsets::ProcessEvent = 0x21A42F8; // (Index: 0x38)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.11-CL-38773622-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.11-CL-38773622-Windows") // thanks LEF
 			{
 				Offsets::StaticFindObject = 0x20A0E4C;
 				Offsets::ProcessEvent = 0x23B3394; // (Index: 0x2c)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.20-CL-39082670-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.20-CL-39082670-Windows") // thanks OMUTU
 			{
 				Offsets::StaticFindObject = 0x2165B14;
 				Offsets::ProcessEvent = 0x21FB80C; // (Index: 0x39)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.20-CL-39277041-Windows")
+			if (ReleaseVersion == "++Fortnite+Release-33.20-CL-39277041-Windows") // thanks OMUTU
 			{
 				Offsets::StaticFindObject = 0x2028B24;
 				Offsets::ProcessEvent = 0x21232B4; // (Index: 0x43)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39435251-Windows") // thanks omutu
+			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39435251-Windows") // thanks OMUTU
 			{
 				Offsets::StaticFindObject = 0x2643024;
 				Offsets::ProcessEvent = 0x2511BC8; // (Index: 0x47)
 			}
 
-			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39768313-Windows") // thanks omutu
+			if (ReleaseVersion == "++Fortnite+Release-33.30-CL-39768313-Windows") // thanks OMUTU
 			{
 				Offsets::StaticFindObject = 0x200C490;
 				Offsets::ProcessEvent = 0x1EE6470; // (Index: 0x27)
+			}
+
+			// Chapter 6 Season 2
+
+			if (ReleaseVersion == "++Fortnite+Release-34.00-CL-40085084-Windows")  // thanks OMUTU
+			{
+				Offsets::StaticFindObject = 0x2EC0224;
+				Offsets::ProcessEvent = 0x25AE34C; // (Index: 0x20)
 			}
 		}
 
