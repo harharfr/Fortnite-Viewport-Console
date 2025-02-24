@@ -106,6 +106,8 @@ namespace SDK
 			{
 				Offsets::StaticFindObject = 0x2EC0224;
 				Offsets::ProcessEvent = 0x25AE34C; // (Index: 0x20)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa38; // UEngine::GameViewport
 			}
 		}
 
