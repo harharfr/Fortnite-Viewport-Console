@@ -107,7 +107,7 @@ namespace SDK
 				Offsets::StaticFindObject = 0x2EC0224;
 				Offsets::ProcessEvent = 0x25AE34C; // (Index: 0x20)
 
-				Offsets::Engine::UEngine::GameViewport = 0xa38; // UEngine::GameViewport
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
 			}
 
 			if (ReleaseVersion == "++Fortnite+Release-34.00-CL-40228973-Windows")
@@ -115,7 +115,30 @@ namespace SDK
 				Offsets::StaticFindObject = 0x21EE808;
 				Offsets::ProcessEvent = 0x232D314; // (Index: 0x22)
 
-				Offsets::Engine::UEngine::GameViewport = 0xa38; // UEngine::GameViewport
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.00-CL-40398515-Windows") // idk
+			{
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.00-CL-40446427-Windows") // idk
+			{
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.10-CL-40567068-Windows") // idk
+			{
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.20-CL-40965447-Windows")
+			{
+				Offsets::StaticFindObject = 0x29A40BC;
+				Offsets::ProcessEvent = 0x27E2C80; // (Index: 0x3C)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
 			}
 		}
 
