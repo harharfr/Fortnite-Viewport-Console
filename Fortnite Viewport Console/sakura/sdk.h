@@ -151,6 +151,14 @@ namespace SDK
 
 				Offsets::Engine::UEngine::GameViewport = 0xa38;
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.30-CL-41387772-Windows")
+			{
+				Offsets::StaticFindObject = 0x2557834;
+				Offsets::ProcessEvent = 0x20F0CF4; // (Index: 0x20)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
