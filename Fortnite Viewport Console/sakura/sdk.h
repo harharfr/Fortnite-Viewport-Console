@@ -159,6 +159,26 @@ namespace SDK
 
 				Offsets::Engine::UEngine::GameViewport = 0xa38;
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.30-CL-41588354-Windows") // idk
+			{
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-34.40-CL-41753727-Windows") // idk
+			{
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			// Chapter 6 Season 3
+
+			if (ReleaseVersion == "++Fortnite+Release-35.00-CL-41994699-Windows")
+			{
+				Offsets::StaticFindObject = 0x28F0834;
+				Offsets::ProcessEvent = 0x1FDC51C; // (Index: 0x39)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
