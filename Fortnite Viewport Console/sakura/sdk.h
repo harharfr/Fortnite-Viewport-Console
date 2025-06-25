@@ -215,6 +215,48 @@ namespace SDK
 
 				Offsets::Engine::UEngine::GameViewport = 0xa38;
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-35.20-CL-42911808-Windows")
+			{
+				Offsets::StaticFindObject = 0x2A6A150;
+				Offsets::ProcessEvent = 0x269D750; // (Index: 0xc)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa38;
+			}
+
+			// Chapter 6 Season 4
+
+			if (ReleaseVersion == "++Fortnite+Release-36.00-CL-43214806-Windows")
+			{
+				Offsets::StaticFindObject = 0x2688398;
+				Offsets::ProcessEvent = 0x21844FC; // (Index: 0x2b)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.00-CL-43339403-Windows")
+			{
+				Offsets::StaticFindObject = 0x20BAA30;
+				Offsets::ProcessEvent = 0x21E4630; // (Index: 0x45)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.10-CL-43486998-Windows")
+			{
+				Offsets::StaticFindObject = 0x21390C0;
+				Offsets::ProcessEvent = 0x20E8728; // (Index: 0x43)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.10-CL-43713507-Windows")
+			{
+				Offsets::StaticFindObject = 0x21A3D50;
+				Offsets::ProcessEvent = 0x23FB67C; // (Index: 0x25)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
