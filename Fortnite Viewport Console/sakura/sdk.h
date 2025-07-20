@@ -257,6 +257,22 @@ namespace SDK
 
 				Offsets::Engine::UEngine::GameViewport = 0xa50;
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.10-CL-43997926-Windows")
+			{
+				Offsets::StaticFindObject = 0x21EEB40;
+				Offsets::ProcessEvent = 0x240045C; // (Index: 0x2f)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.20-CL-43847582-Windows")
+			{
+				Offsets::StaticFindObject = 0x1E3C9A8;
+				Offsets::ProcessEvent = 0x1A33BF8; // (Index: 0x4c)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
