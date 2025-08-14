@@ -2,13 +2,40 @@
 
 static UObject* StaticFindObject(UClass* Class, UObject* InOuter, const TCHAR* Name, bool ExactClass = false)
 {
-	static UObject* (*StaticFindObject)(UClass*, UObject*, const TCHAR*, bool) = nullptr;
+    static UObject* (*OldStaticFindObject)(UClass*, UObject*, const TCHAR*, bool) = nullptr;
 
-	if (StaticFindObject == nullptr)
-		StaticFindObject = reinterpret_cast<decltype(StaticFindObject)>(uintptr_t(GetModuleHandle(NULL)) + SDK::Offsets::StaticFindObject);
+    if (!OldStaticFindObject)
+        OldStaticFindObject = reinterpret_cast<decltype(OldStaticFindObject)>(
+            uintptr_t(GetModuleHandle(NULL)) + SDK::Offsets::StaticFindObject
+        );
 
-	return StaticFindObject(Class, InOuter, Name, ExactClass);
+    if (!SDK::Offsets::StaticFindObjectFix)
+    {
+        return OldStaticFindObject(Class, InOuter, Name, ExactClass);
+    }
+    else
+    {
+        struct
+        {
+            const wchar_t* Ptr;
+            int Length;
+        } NameStruct;
+
+#ifdef _UNICODE
+        NameStruct.Ptr = Name;
+#else
+        std::wstring wName(Name);
+        NameStruct.Ptr = wName.c_str();
+#endif
+        NameStruct.Length = static_cast<int>(NoCRT::__wcslen(NameStruct.Ptr));
+
+        using FnType = UObject* (__fastcall*)(UClass*, UObject*, void*, uint64_t);
+        FnType Fn = reinterpret_cast<FnType>(OldStaticFindObject);
+        return Fn(Class, InOuter, &NameStruct, 0);
+    }
 }
+
+
 
 class UObject
 {

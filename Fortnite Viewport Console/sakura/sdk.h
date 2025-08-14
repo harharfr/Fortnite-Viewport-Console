@@ -2,8 +2,10 @@
 
 namespace SDK
 {
+
 	namespace Offsets
 	{
+		inline bool OldStaticFindObject = true;
 		uintptr_t StaticFindObject = 0x0;
 		uintptr_t ProcessEvent = 0x0; // UObject::ProcessEvent
 
@@ -273,6 +275,37 @@ namespace SDK
 
 				Offsets::Engine::UEngine::GameViewport = 0xa50;
 			}
+
+			if (ReleaseVersion == "++Fortnite+Release-36.20-CL-44118662-Windows")
+			{
+				Offsets::StaticFindObject = 0x1E6D864;
+				Offsets::ProcessEvent = 0x1A41578; // (Index: 0x4c)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+
+			// Chapter 6 Season 5
+		
+			if (ReleaseVersion == "++Fortnite+Release-37.00-CL-44501951-Windows")
+			{
+				Offsets::OldStaticFindObject = false;
+				Offsets::StaticFindObject = 0x2BD2CBC;
+				Offsets::ProcessEvent = 0x2877C98; // (Index: 0x2e)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+			}
+
+			if (ReleaseVersion == "++Fortnite+Release-37.00-CL-44765404-Windows")
+			{
+				Offsets::OldStaticFindObject = false;
+				Offsets::StaticFindObject = 0x2D5FD14;
+				Offsets::ProcessEvent = 0x28CE568; // (Index: 0x4e)
+
+				Offsets::Engine::UEngine::GameViewport = 0xa50;
+				
+			}
+
 		}
 
 		return Offsets::StaticFindObject != 0x0 && Offsets::ProcessEvent != 0x0;
